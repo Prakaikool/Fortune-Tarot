@@ -1,13 +1,13 @@
 <script setup>
-
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <div>
-    <h1>Vi är grymma Richard</h1>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/cards">Tarot</RouterLink>
+  </div>
+  <div>
+    <RouterView />
   </div>
 </template>
-
-<style scoped>
-
-</style>
