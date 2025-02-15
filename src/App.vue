@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router'
 <template>
   <nav>
     <router-link to="/">Fortune Tarot</router-link>
-    <router-link to="/cards">All Cards</router-link>
+    <router-link to="/cards">Cards</router-link>
   </nav>
   <router-view />
 </template>
