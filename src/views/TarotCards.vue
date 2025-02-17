@@ -17,7 +17,7 @@ const fetchTarotCards = async () => {
 
     cards.value = data.cards.map((card) => ({
       ...card,
-      image: `/cards/${card.name_short}.png`, // Correct image path (public/cards/)
+      image: `/cards/${card.name_short}.png`,
     }))
   } catch (error) {
     console.error('Error fetching tarot cards:', error)
