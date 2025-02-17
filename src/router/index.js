@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import FortuneTarot from '../views/FortuneTarot'
-import TarotCards from '../views/TarotCards'
+import FortuneTarot from '../views/FortuneTarot.vue'
+import TarotCards from '../views/TarotCards.vue'
 
 const routes = [
   { path: '/', name: 'fortunecards', component: FortuneTarot },
