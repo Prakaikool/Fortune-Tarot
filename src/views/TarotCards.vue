@@ -113,4 +113,9 @@ onMounted(fetchTarotCards)
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.tarot-app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+</style>
