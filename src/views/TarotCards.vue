@@ -122,4 +122,19 @@ onMounted(fetchTarotCards)
   color: #03315c; /* Dark blue text color */
   padding: 20px;
 }
+
+/* Input Fields styling */
+input, select {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #03315c; /* Dark blue */
+  border-radius: 5px;
+  background-color: #ead560; /* Yellow */
+  color: #03315c; /* text color */
+  font-size: 1rem; /* text size on seaching bar */
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+
 </style>
