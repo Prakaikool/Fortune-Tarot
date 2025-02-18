@@ -130,11 +130,21 @@ input, select {
   border: 2px solid #03315c; /* Dark blue */
   border-radius: 5px;
   background-color: #ead560; /* Yellow */
-  color: #03315c; /* text color */
-  font-size: 1rem; /* text size on seaching bar */
+  color: #03315c; /* Text color */
+  font-size: 1rem; /* Text size on seaching bar */
   outline: none;
   transition: all 0.2s ease-in-out;
 }
 
+input::placeholder {
+  color: #03315c;
+  opacity: 07.;
+}
+
+/* Highlight when searching */
+input:focus, select:focus {
+  border-color: #d5b25e; /* Soft yellow */
+  background-color: #f5e1a1; /* Lighter yellow */
+}
 
 </style>
