@@ -114,8 +114,12 @@ onMounted(fetchTarotCards)
 </template>
 
 <style scoped>
+/* Base setup */
 .tarot-app {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'IM Fell DW Pica', sans-serif;
+  background-color: #cab7d8; /* Light purple */
+  color: #03315c; /* Dark blue text color */
+  padding: 20px;
 }
 </style>
