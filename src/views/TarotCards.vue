@@ -171,10 +171,10 @@ select {
 .tarot-card {
   background-color: #03315c; /* Card color */
   color: #ead560;
-  padding: 15px;
+  padding: 30px;
   border-radius: 10px;
   text-align: center; /* Cards name in on center of the card */
-  max-width: 350px; /* Cards size */
+  max-width: 250px; /* Cards size */
   transition:
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
@@ -188,5 +188,19 @@ select {
   box-shadow: 0px 6px 15px #000000;
 }
 
+/* Set the images size because it's too big */
+.tarot-card-image {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: contain;
+  border-radius: 5px; /* Highlight the border of image with yellow color */
+  border: 2px solid #ead560;
+  margin-top: 30px;
+}
 
+/* Font size */
+.tarot-card h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
 </style>
