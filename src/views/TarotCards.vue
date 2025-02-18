@@ -181,4 +181,12 @@ select {
   box-shadow: #000000 0px 4px 10px; /* Add shadow for the cards */
   cursor: pointer; /* Hand point */
 }
+
+/* Make animation or transition for the cards so it's can moving */
+.tarot-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px #000000;
+}
+
+
 </style>
