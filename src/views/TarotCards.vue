@@ -190,6 +190,7 @@ select {
 
 /* Set the images size because it's too big */
 .tarot-card-image {
+  align-content: center;
   max-width: 100%;
   max-height: 70%;
   object-fit: contain;
@@ -231,8 +232,10 @@ select {
   border-radius: 15px;
   max-width: 750px;
   width: 100%;
-  max-height: 80vh;
+  margin-top: 30px;
+  max-height: 90vh;
   position: relative;
+  align-content: center;
   box-shadow: 0 6px 18px #858484;
   overflow-y: auto; /* Can scrolling inside modal */
   animation:
@@ -282,5 +285,38 @@ select {
 
 .close-button:hover {
   color: #ead560; /* Yellow hover effect when click*/
+}
+
+/* Smooth hover effect for cards */
+.tarot-card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.tarot-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px #000000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>
