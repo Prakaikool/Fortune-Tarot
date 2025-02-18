@@ -147,4 +147,13 @@ input:focus, select:focus {
   background-color: #f5e1a1; /* Lighter yellow */
 }
 
+/* Select dropdown */
+select {
+  padding: 10px;
+  border-radius: 20px; /* Round form */
+  appearance: none; /* Hide arrow on dropdwon */
+  background-size: 12px ;
+  cursor: pointer; /* Hand click */
+}
+
 </style>
