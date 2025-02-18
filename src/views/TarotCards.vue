@@ -124,7 +124,8 @@ onMounted(fetchTarotCards)
 }
 
 /* Input Fields styling */
-input, select {
+input,
+select {
   padding: 10px;
   margin: 5px;
   border: 2px solid #03315c; /* Dark blue */
@@ -138,11 +139,12 @@ input, select {
 
 input::placeholder {
   color: #03315c;
-  opacity: 07.;
+  opacity: 07;
 }
 
 /* Highlight when searching */
-input:focus, select:focus {
+input:focus,
+select:focus {
   border-color: #d5b25e; /* Soft yellow */
   background-color: #f5e1a1; /* Lighter yellow */
 }
@@ -152,8 +154,8 @@ select {
   padding: 10px;
   border-radius: 20px; /* Round form */
   appearance: none; /* Hide arrow on dropdwon */
-  background-size: 12px ;
-  cursor: pointer; /* Hand click */
+  background-size: 12px;
+  cursor: pointer; /* Hand point */
 }
 
 /* Make the card to colum */
@@ -163,5 +165,20 @@ select {
   justify-content: center; /* To be on the page center */
   gap: 20px; /* Space between the card */
   margin-top: 20px;
+}
+
+/* Tarot cards styles */
+.tarot-card {
+  background-color: #03315c; /* Card color */
+  color: #ead560;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center; /* Cards name in on center of the card */
+  max-width: 350px; /* Cards size */
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  box-shadow: #000000 0px 4px 10px; /* Add shadow for the cards */
+  cursor: pointer; /* Hand point */
 }
 </style>
