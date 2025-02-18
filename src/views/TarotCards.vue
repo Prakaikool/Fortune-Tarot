@@ -156,4 +156,12 @@ select {
   cursor: pointer; /* Hand click */
 }
 
+/* Make the card to colum */
+.tarot-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* To be on the page center */
+  gap: 20px; /* Space between the card */
+  margin-top: 20px;
+}
 </style>
