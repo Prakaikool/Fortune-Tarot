@@ -203,4 +203,84 @@ select {
   font-size: 1.5rem;
   margin-top: 30px;
 }
+
+/* Modal overlay (Popup) for cards details */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full screen */
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Modal on the center of page */
+  align-content: center;
+  z-index: 1000; /* Modal is ontop of the other content */
+  background: #03315c; /* Background when modal is open */
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* No scrolling when modal is open */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #cab7d8; /* Modal or popup background */
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 750px;
+  width: 100%;
+  max-height: 80vh;
+  position: relative;
+  box-shadow: 0 6px 18px #858484;
+  overflow-y: auto; /* Can scrolling inside modal */
+  animation:
+    fadeIn 0.3s ease-out,
+    slideIn 0.3s ease-out;
+}
+
+/* Fixed image size on popup */
+.modal-tarot-image {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 3px solid #ead560; /* Highlight border for the image */
+}
+
+/* Modal Title */
+.modal-title {
+  font-family: 'IM Fell DW Pica', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #03315c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Text on the popup */
+.modal-scrollable-content p {
+  color: #03315c;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* Close Button, position, size and color */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #03315c;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+  color: #ead560; /* Yellow hover effect when click*/
+}
 </style>
