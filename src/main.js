@@ -1,19 +1,16 @@
-import './assets/style.css';
+import './assets/style.css' // import tyle.css for styling every page (gobal)
 
-import { createApp } from 'vue'
+import { createApp } from 'vue' // import vue
 import App from './App.vue'
-import router from './router'
-import { createVuetify } from 'vuetify'
-import 'vuetify/styles'
+import { createVuetify } from 'vuetify' // import vuetify for raedy to use material design
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import 'vuetify/styles'
+import router from './router'
 
 const vuetify = createVuetify({
   components,
   directives,
-  theme: {
-    defaultTheme: 'light',
-  },
 })
 
 const app = createApp(App)

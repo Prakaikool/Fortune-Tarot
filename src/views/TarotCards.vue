@@ -62,6 +62,14 @@ onMounted(fetchTarotCards)
 </script>
 
 <template>
+  <div class="tarot-welcoming">
+    <h1>"Discover the Tarot cards here"</h1>
+    <h2>
+      Welcome to the Tarot Card Library, where you can explore the full deck of tarot cards and
+      uncover their meanings. Each card carries deep symbolism, offering insights into life’s
+      mysteries, challenges, and guidance.
+    </h2>
+  </div>
   <div class="tarot-app">
     <h1>All Cards ({{ filteredCards.length }})</h1>
 
@@ -120,7 +128,15 @@ onMounted(fetchTarotCards)
   font-family: 'IM Fell DW Pica', sans-serif;
   background-color: #cab7d8; /* Light purple */
   color: #03315c; /* Dark blue text color */
-  padding: 20px;
+  padding-top: 20vh;
+}
+
+.tarot-welcoming {
+  background: #cab7d8;
+  text-align: center;
+  padding-top: 20vh;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /* Input Fields styling */
