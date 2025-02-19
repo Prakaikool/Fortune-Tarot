@@ -75,7 +75,7 @@ onMounted(fetchTarotCards)
     <h1>All Cards ({{ filteredCards.length }})</h1>
 
     <!-- Search Input -->
-    <input v-model="search" placeholder="Search for a card..." />
+    <input v-model="search" placeholder="🔮 Search for a card..." />
 
     <!-- Filter by Type -->
     <select v-model="selectedType" @change="resetSuitOnMinorSelect">
