@@ -8,13 +8,14 @@ const selectedType = ref('')
 const selectedSuit = ref('')
 const selectedCard = ref(null)
 
-// **Fetch Tarot Cards**
+// Fetch Tarot Cards - get data  from API
 const fetchTarotCards = async () => {
   try {
     const response = await fetch('https://tarotapi.dev/api/v1/cards')
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
     const data = await response.json()
 
+    // Adds an image to each card
     cards.value = data.cards.map((card) => ({
       ...card,
       image: `/cards/${card.name_short}.png`,
@@ -24,7 +25,7 @@ const fetchTarotCards = async () => {
   }
 }
 
-// **Computed property to filter cards**
+// Computed property to filter cards (select)
 const filteredCards = computed(() => {
   return cards.value.filter((card) => {
     const matchesSearch = card.name.toLowerCase().includes(search.value.toLowerCase())
@@ -40,17 +41,17 @@ const filteredCards = computed(() => {
   })
 })
 
-// **Show Card Details (Modal)**
+// Show Card Details (Modal) popup card
 const showCardDetails = (card) => {
   selectedCard.value = card
 }
 
-// **Close Modal**
+// Close funktion (Modal) popup card
 const closeModal = () => {
   selectedCard.value = null
 }
 
-// **Reset Suit when switching away from Minor Arcana**
+// Reset Suit when switching away from Minor Arcana
 const resetSuitOnMinorSelect = () => {
   if (selectedType.value !== 'minor') {
     selectedSuit.value = ''
@@ -63,7 +64,7 @@ onMounted(fetchTarotCards)
 
 <template>
   <div class="tarot-welcoming">
-    <h1>"Discover the Tarot cards here"</h1>
+    <h1>Discover the Cards...</h1>
     <h2>
       Welcome to the Tarot Card Library, where you can explore the full deck of tarot cards and
       uncover their meanings. Each card carries deep symbolism, offering insights into life’s
@@ -100,6 +101,7 @@ onMounted(fetchTarotCards)
         :key="card.id"
         @click="showCardDetails(card)"
       >
+        <!-- Image and card name -->
         <img v-if="card.image" :src="card.image" alt="Tarot Card Image" class="tarot-card-image" />
         <h2>{{ card.name }}</h2>
       </div>
@@ -108,6 +110,7 @@ onMounted(fetchTarotCards)
     <!-- Modal for showing card details -->
     <div v-if="selectedCard" class="modal-overlay" @click.self="closeModal">
       <div class="modal-content">
+        <!-- Add close button for popup -->
         <button class="close-button" @click="closeModal">X</button>
         <img :src="selectedCard.image" alt="Tarot Card Image" class="modal-tarot-image" />
         <h2 class="modal-title">{{ selectedCard.name }}</h2>
@@ -122,40 +125,61 @@ onMounted(fetchTarotCards)
 </template>
 
 <style scoped>
-/* Base setup */
+/* Base setup for this page */
 .tarot-app {
   text-align: center;
   font-family: 'IM Fell DW Pica', sans-serif;
   background-color: #cab7d8; /* Light purple */
   color: #03315c; /* Dark blue text color */
-  padding-top: 20vh;
+  padding-top: vh;
 }
 
+/* Welcomeming text setting */
 .tarot-welcoming {
   background: #cab7d8;
-  text-align: center;
-  padding-top: 20vh;
-  padding-left: 60px;
-  padding-right: 60px;
+  color: #000000;
+  font-size: 1.3rem;
+  padding: 15vh 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: left;
+  background: #cab7d8;
+}
+
+.tarot-welcoming h1 {
+  color: #000000;
+  font-size: 3rem;
+  margin-bottom: 30px;
 }
 
 /* Input Fields styling */
 input,
 select {
+  text-align: center;
   padding: 10px;
-  margin: 5px;
-  border: 2px solid #03315c; /* Dark blue */
-  border-radius: 5px;
+  margin: 20px;
+  border: 5px solid #000000;
+  border-radius: 20px;
   background-color: #ead560; /* Yellow */
-  color: #03315c; /* Text color */
-  font-size: 1rem; /* Text size on seaching bar */
+  color: #03315c; /* Text color dark blue */
+  font-size: 1.2rem; /* Text size on seaching bar */
   outline: none;
   transition: all 0.2s ease-in-out;
 }
 
+input {
+  width: 100%; /* Input width */
+  max-width: 600px;
+  padding: 10px 20px; /* Padding inside the input */
+  margin: 30px auto;
+  font-size: 1.3rem; /* Regular text size inside input */
+  display: block;
+}
+
 input::placeholder {
+  font-size: 1.6rem;
   color: #03315c;
-  opacity: 07;
+  opacity: 0.8;
 }
 
 /* Highlight when searching */
@@ -167,7 +191,7 @@ select:focus {
 
 /* Select dropdown */
 select {
-  padding: 10px;
+  width: 150px;
   border-radius: 20px; /* Round form */
   appearance: none; /* Hide arrow on dropdwon */
   background-size: 12px;
@@ -178,24 +202,26 @@ select {
 .tarot-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* To be on the page center */
-  gap: 20px; /* Space between the card */
-  margin-top: 20px;
+  justify-content: center; /* To be center on the page */
+  gap: 50px; /* Space between the cards */
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 2rem;
 }
 
 /* Tarot cards styles */
 .tarot-card {
   background-color: #03315c; /* Card color */
   color: #ead560;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
-  text-align: center; /* Cards name in on center of the card */
+  text-align: center; /* Name on center of the card */
   max-width: 250px; /* Cards size */
+  box-shadow: #000000 0px 4px 10px; /* Add shadow for the cards */
+  cursor: pointer; /* Hand point */
   transition:
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
-  box-shadow: #000000 0px 4px 10px; /* Add shadow for the cards */
-  cursor: pointer; /* Hand point */
 }
 
 /* Make animation or transition for the cards so it's can moving */
@@ -204,9 +230,9 @@ select {
   box-shadow: 0px 6px 15px #000000;
 }
 
-/* Set the images size because it's too big */
+/* Set the images size */
 .tarot-card-image {
-  align-content: center;
+  align-content: center; /* Center on the card */
   max-width: 100%;
   max-height: 70%;
   object-fit: contain;
@@ -229,7 +255,7 @@ select {
   width: 100%; /* Full screen */
   height: 100%;
   display: flex;
-  justify-content: center; /* Modal on the center of page */
+  justify-content: center; /* Modal be on center of page */
   align-content: center;
   z-index: 1000; /* Modal is ontop of the other content */
   background: #03315c; /* Background when modal is open */
@@ -247,7 +273,7 @@ select {
   padding: 30px;
   border-radius: 15px;
   max-width: 750px;
-  width: 100%;
+  width: 90%;
   margin-top: 30px;
   max-height: 90vh;
   position: relative;
@@ -301,18 +327,6 @@ select {
 
 .close-button:hover {
   color: #ead560; /* Yellow hover effect when click*/
-}
-
-/* Smooth hover effect for cards */
-.tarot-card {
-  transition:
-    transform 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
-}
-
-.tarot-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px #000000;
 }
 
 /* Animations */
