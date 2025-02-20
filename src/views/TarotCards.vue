@@ -64,7 +64,7 @@ onMounted(fetchTarotCards)
 
 <template>
   <div class="tarot-welcoming">
-    <h1>Discover the Cards...</h1>
+    <h1>✪ Discover the Cards...</h1>
     <h2>
       Welcome to the Tarot Card Library, where you can explore the full deck of tarot cards and
       uncover their meanings. Each card carries deep symbolism, offering insights into life’s
