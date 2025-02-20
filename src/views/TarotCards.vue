@@ -272,7 +272,7 @@ select {
   background-color: #cab7d8; /* Modal or popup background */
   padding: 30px;
   border-radius: 15px;
-  max-width: 750px;
+  max-width: 800px;
   width: 90%;
   margin-top: 30px;
   max-height: 90vh;
