@@ -134,11 +134,10 @@ onMounted(fetchTarotCards)
 
 /* Welcomeming text setting */
 .tarot-welcoming {
-  background: #cab7d8;
   color: #000000;
   padding: 20vh 2rem;
   font-size: 36px;
-  margin: 0 auto;
+  margin: 15vh auto;
   max-width: 1200px;
   text-align: left;
 }
@@ -146,14 +145,13 @@ onMounted(fetchTarotCards)
 .tarot-welcoming h2 {
   color: #000000;
   font-size: 36px;
-  margin-top: 5vh;
 }
 
 /* Input Fields styling */
 input,
 select {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   margin: 20px;
   border: 5px solid #000000;
   border-radius: 20px;
@@ -167,7 +165,7 @@ select {
 input {
   width: 100%; /* Input width */
   max-width: 600px;
-  padding: 10px 20px; /* Padding inside the input */
+  padding: 5px 20px; /* Padding inside the input */
   margin: 30px auto;
   font-size: 24px; /* Regular text size inside input */
   display: block;
@@ -188,7 +186,7 @@ select:focus {
 
 /* Select dropdown */
 select {
-  width: 150px;
+  width: 200px;
   border-radius: 20px; /* Round form */
   appearance: none; /* Hide arrow on dropdwon */
   background-size: 12px;
@@ -203,7 +201,7 @@ select {
   gap: 50px; /* Space between the cards */
   margin: 0 auto;
   max-width: 1500px;
-  padding: 0 2rem;
+  padding: 2rem;
 }
 
 /* Tarot cards styles */
