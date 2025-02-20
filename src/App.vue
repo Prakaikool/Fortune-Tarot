@@ -2,6 +2,7 @@
 import { RouterView, useRoute } from 'vue-router'
 import { computed } from 'vue'
 import NavBar from './components/NavBar.vue'
+import SparkleEffect from './components/SparkleEffect.vue'
 
 const route = useRoute()
 const currentPage = computed(() => route.name)
@@ -9,6 +10,7 @@ const currentPage = computed(() => route.name)
 
 <template>
   <div>
+    <SparkleEffect />
     <NavBar :page="currentPage" />
     <RouterView />
   </div>
@@ -22,7 +24,7 @@ body {
   padding: 0;
   background:
     radial-gradient(ellipse at top, #cab7d8, transparent),
-    radial-gradient(ellipse at bottom, #ead560, transparent);
+    radial-gradient(ellipse at bottom, #718294, transparent);
   box-sizing: border-box;
   font-family: 'IM Fell DW Pica', sans-serif;
   overflow: hidden;
