@@ -129,27 +129,24 @@ onMounted(fetchTarotCards)
 .tarot-app {
   text-align: center;
   font-family: 'IM Fell DW Pica', sans-serif;
-  background-color: #cab7d8; /* Light purple */
   color: #03315c; /* Dark blue text color */
-  padding-top: vh;
 }
 
 /* Welcomeming text setting */
 .tarot-welcoming {
   background: #cab7d8;
   color: #000000;
-  font-size: 1.3rem;
-  padding: 15vh 2rem;
+  padding: 20vh 2rem;
+  font-size: 36px;
   margin: 0 auto;
   max-width: 1200px;
   text-align: left;
-  background: #cab7d8;
 }
 
-.tarot-welcoming h1 {
+.tarot-welcoming h2 {
   color: #000000;
-  font-size: 3rem;
-  margin-bottom: 30px;
+  font-size: 36px;
+  margin-top: 5vh;
 }
 
 /* Input Fields styling */
@@ -162,7 +159,7 @@ select {
   border-radius: 20px;
   background-color: #ead560; /* Yellow */
   color: #03315c; /* Text color dark blue */
-  font-size: 1.2rem; /* Text size on seaching bar */
+  font-size: 24px; /* Text size on seaching bar */
   outline: none;
   transition: all 0.2s ease-in-out;
 }
@@ -172,12 +169,12 @@ input {
   max-width: 600px;
   padding: 10px 20px; /* Padding inside the input */
   margin: 30px auto;
-  font-size: 1.3rem; /* Regular text size inside input */
+  font-size: 24px; /* Regular text size inside input */
   display: block;
 }
 
 input::placeholder {
-  font-size: 1.6rem;
+  font-size: 24px;
   color: #03315c;
   opacity: 0.8;
 }
@@ -243,7 +240,7 @@ select {
 
 /* Font size */
 .tarot-card h2 {
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-top: 30px;
 }
 
@@ -297,7 +294,7 @@ select {
 /* Modal Title */
 .modal-title {
   font-family: 'IM Fell DW Pica', sans-serif;
-  font-size: 1.8rem;
+  font-size: 36px;
   font-weight: bold;
   color: #03315c;
   text-align: center;
@@ -308,7 +305,7 @@ select {
 .modal-scrollable-content p {
   color: #03315c;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 24px;
   line-height: 2rem;
 }
 
@@ -319,7 +316,7 @@ select {
   right: 15px;
   background-color: transparent;
   border: none;
-  font-size: 2.5rem;
+  font-size: 36px;
   cursor: pointer;
   color: #03315c;
   transition: color 0.2s ease-in-out;
