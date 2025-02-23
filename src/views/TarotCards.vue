@@ -12,7 +12,8 @@ const selectedCard = ref(null)
 const fetchTarotCards = async () => {
   try {
     const response = await fetch('https://tarotapi.dev/api/v1/cards')
-    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
+    if (!response.ok) throw new Error(`Failed to fetch cards. Status: ${response.status}`)
+
     const data = await response.json()
 
     // Adds an image to each card
