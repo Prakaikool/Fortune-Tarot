@@ -22,9 +22,31 @@
       <h2>Draw three Tarot cards here!</h2>
       <p>*Three cards: past, present and future</p>
 
-      <input type="button" @click="drawCards" value="DRAW!">
+      <input type="button" @click="drawCards" value="DRAW!" />
 
-      
+      <!-- Cards Front-side: index and image -->
+      <div
+        v-for="(card, index) in cards"
+        :key="index"
+        @click="flipCard(index)"
+        :class="{ flipped: card.flipped }"
+      >
+        <div class="tarot-card-fronnt">
+          <img
+            v-if="card.iamge"
+            :src="card.image"
+            alt="Tarot Card Image"
+            class="tarot-card-image"
+          />
+          <h3>{{ card.name }}</h3>
+        </div>
+      </div>
+      <!-- Cards back-side: index, upright and reversed -->
+      <div class="tarot-card-back">
+        <h3>{{ card.name }}</h3>
+        <p><strong>Meaning (Upright):</strong> {{ card.meaning_up }}</p>
+        <p><strong>Meaning (Reversed):</strong>{{ card.meaning_rev }}</p>
+      </div>
     </div>
   </div>
 </template>
