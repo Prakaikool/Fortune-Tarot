@@ -54,15 +54,70 @@ function resetStepper() {
 </template>
 
 <style scoped>
+/* Base setup */
 .v-stepper {
-  background-color: #03315c;
+  background-color: #ead560;
   font-family: 'IM Fell DW Pica', sans-serif;
-  color: #ead560;
+  color: #03315c;
   padding: 20px;
-  border-radius: 10px;
-  justify-items: center;
+  border: 5px solid #000000;
+  border-radius: 20px;
   max-width: 1200px;
   margin: 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.v-stepper p {
+  font-size: 24px;
+  color: #000000;
+}
+
+/* V-button styling */
+.v-btn {
+  font-family: 'IM Fell DW Pica', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  text-transform: uppercase; /* UPPERCASE */
+  transition: all 0.3s ease;
+  margin: 10px 10px; /* Add spacing between buttons */
+}
+
+.v-btn:not(.v-btn--text) {
+  background-color: #03315c; /* Dark blue background */
+  color: #ead560; /* Yellow text */
+  border: 5px solid #000000;
+}
+
+/* button hover */
+.v-btn:not(.v-btn--text):hover {
+  background-color: #f5e1a1;
+  color: #03315c;
+  border-color: #03315c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* shadow for button hover */
+}
+
+/* Text Button (Back) */
+.v-btn.v-btn--text {
+  background-color: transparent;
+  color: #03315c;
+  border: 2px solid transparent;
+}
+
+.v-btn.v-btn--text:hover {
+  background-color: rgba(234, 213, 96, 0.2);
+  color: #03315c;
+}
+
+/* Reset button */
+.v-btn.v-btn--variant-plain {
+  background-color: transparent;
+  color: #d9534f;
+  border: 5px solid #d9534f;
+}
+
+.v-btn.v-btn--variant-plain:hover {
+  background-color: rgba(217, 83, 79, 0.1);
+  color: #d9534f;
 }
 </style>

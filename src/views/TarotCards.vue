@@ -73,7 +73,7 @@ onMounted(fetchTarotCards)
     </p>
   </div>
   <div class="tarot-app">
-    <h1>All Cards ({{ filteredCards.length }})</h1>
+    <h2 class="all-cards">All Cards ({{ filteredCards.length }})</h2>
 
     <!-- Search Input -->
     <input v-model="search" placeholder="🔮 Search for a card..." />
@@ -143,8 +143,12 @@ onMounted(fetchTarotCards)
   text-align: left;
 }
 
-.tarot-welcoming h2 {
+.tarot-welcoming p {
   color: #000000;
+  font-size: 36px;
+}
+
+.all-cards {
   font-size: 36px;
 }
 

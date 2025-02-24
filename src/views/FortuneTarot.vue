@@ -33,8 +33,8 @@ const drawCards = async () => {
     </div>
 
     <div class="step">
-      <h2>How to play...</h2>
-      <SteppersVertical />
+      <h2 class="how-to-play">How to play...</h2>
+      <SteppersVertical class="stepper" />
     </div>
 
     <div class="fortune-app">
@@ -44,6 +44,7 @@ const drawCards = async () => {
       <input type="button" @click="drawCards" value="DRAW!" />
 
       <div class="tarot-card-container" v-if="cards.length">
+        <!-- Flipp the card to read about the cards meaning -->
         <div
           class="tarot-card"
           v-for="(card, index) in cards"
@@ -65,6 +66,7 @@ const drawCards = async () => {
           <div class="tarot-card-back">
             <h3>{{ card.name }}</h3>
             <p><strong>Meaning (Upright):</strong> {{ card.meaning_up }}</p>
+            <!-- Cards meaning -->
             <p><strong>Meaning (Reversed):</strong>{{ card.meaning_rev }}</p>
           </div>
         </div>
@@ -75,13 +77,13 @@ const drawCards = async () => {
 
 <style scoped>
 /* Base setup for this page */
-.tarot-app {
+.fortune-container {
   text-align: center;
   font-family: 'IM Fell DW Pica', sans-serif;
   color: #03315c; /* Dark blue text color */
 }
 
-/* Welcomeming text setting */
+/* Welcomeming text - setting */
 .fortune-welcoming {
   color: #000000;
   padding: 20vh 2rem;
@@ -96,7 +98,12 @@ const drawCards = async () => {
   font-size: 36px;
 }
 
-.step {
-  max-width: 1200px;
+/* Stepper */
+.how-to-play {
+  font-size: 36px;
+}
+
+.stepper {
+  margin-top: 2rem;
 }
 </style>
