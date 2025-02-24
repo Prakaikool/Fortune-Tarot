@@ -3,6 +3,7 @@ import { RouterView, useRoute } from 'vue-router'
 import { computed } from 'vue'
 import NavBar from './components/NavBar.vue'
 import SparkleEffect from './components/SparkleEffect.vue'
+import FooTer from './components/FooTer.vue'
 
 const route = useRoute()
 const currentPage = computed(() => route.name)
@@ -14,6 +15,8 @@ const currentPage = computed(() => route.name)
     <NavBar :page="currentPage" />
     <RouterView />
   </div>
+
+  <FooTer />
 </template>
 
 <style>
