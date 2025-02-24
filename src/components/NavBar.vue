@@ -2,13 +2,6 @@
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
-const props = defineProps({
-  page: {
-    required: true,
-    type: String,
-  },
-})
-
 // Toogle menu
 const menuOpen = ref(false)
 const toggleMenu = () => {
@@ -27,12 +20,8 @@ const toggleMenu = () => {
     </div>
 
     <div class="nav-links" :class="{ active: menuOpen }">
-      <router-link class="link" to="/" :class="{ isActive: props.page === 'home' }"
-        >Home</router-link
-      >
-      <router-link class="link" to="/cards" :class="{ isActive: props.page === 'cards' }"
-        >Cards</router-link
-      >
+      <router-link class="link" to="/" active-class="isActive">Home</router-link>
+      <router-link class="link" to="/cards" active-class="isActive">Cards</router-link>
     </div>
   </nav>
 </template>
@@ -50,7 +39,7 @@ const toggleMenu = () => {
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px hsl(0, 0%, 0%)
+  box-shadow: 0 4px 8px hsl(0, 0%, 0%);
 }
 
 /* Logo styling */

@@ -3,3 +3,8 @@
 body {
   font-family: 'IM Fell DW Pica', serif;
 }
+
+.isActive {
+  color: #cab7d8;
+  font-weight: bold;
+}
