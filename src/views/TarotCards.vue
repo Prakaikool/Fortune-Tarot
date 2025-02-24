@@ -349,4 +349,107 @@ select {
     opacity: 1;
   }
 }
+
+/* Responsiv for  small screen */
+@media screen and (max-width: 768px) {
+  .tarot-welcoming {
+    padding: 10vh 1rem;
+    margin: 10vh auto;
+    font-size: 28px;
+  }
+  .tarot-welcoming p {
+    font-size: 20px;
+  }
+
+  .all-cards {
+    font-size: 28px;
+  }
+
+  input,
+  select {
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+  }
+
+  .tarot-cards-container {
+    gap: 20px;
+    padding: 1rem;
+  }
+
+  .tarot-card {
+    max-width: 180px;
+    padding: 15px;
+  }
+
+  .tarot-card h2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .tarot-card-image {
+    margin-top: 10px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  .modal-tarot-image {
+    width: 50%;
+  }
+  .modal-title {
+    font-size: 28px;
+  }
+  .modal-scrollable-content p {
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .tarot-welcoming {
+    padding: 5vh 1rem;
+    margin: 5vh auto;
+    font-size: 24px;
+  }
+  .tarot-welcoming p {
+    font-size: 18px;
+  }
+
+  .all-cards {
+    font-size: 24px;
+    margin-top: 1rem;
+  }
+
+  input,
+  select {
+    font-size: 18px;
+  }
+
+  .tarot-card {
+    max-width: 150px;
+    padding: 10px;
+  }
+
+  .tarot-card h2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .modal-tarot-image {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  .modal-scrollable-content p {
+    font-size: 16px;
+    line-height: 1.4rem;
+  }
+}
 </style>

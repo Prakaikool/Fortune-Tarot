@@ -248,4 +248,82 @@ const flipCard = (index) => {
 .tarot-card.flipped .tarot-card-back {
   transform: rotateY(0deg); /* Back becomes visible */
 }
+
+/* Responsiv */
+@media screen and (max-width: 768px) {
+  .fortune-welcoming {
+    padding: 10vh 1rem;
+    margin: 10vh auto;
+    font-size: 28px;
+  }
+  .fortune-welcoming p {
+    font-size: 20px;
+  }
+
+  .how-to-play {
+    font-size: 28px;
+  }
+
+  .fortune-app {
+    font-size: 20px;
+    padding-left: 1rem;
+    margin: 10vh auto;
+  }
+
+  .draw-button {
+    margin-top: 2rem;
+    padding: 5px 10px;
+    border-width: 3px;
+    border-radius: 10px;
+  }
+
+  .tarot-card-container {
+    gap: 20px;
+    padding: 1rem;
+  }
+
+  .tarot-card {
+    width: 200px;
+    height: 400px;
+  }
+
+  .tarot-card-front h3,
+  .tarot-card-back h3 {
+    font-size: 20px;
+  }
+
+  .tarot-card-back p {
+    font-size: 14px;
+  }
+}
+
+/* Small phone */
+@media screen and (max-width: 480px) {
+  .fortune-welcoming {
+    padding: 5vh 1rem;
+    margin: 5vh auto;
+    font-size: 24px;
+  }
+  .fortune-welcoming p {
+    font-size: 18px;
+  }
+
+  .fortune-app {
+    font-size: 16px;
+  }
+
+  .tarot-card {
+    width: 180px;
+    height: 360px;
+  }
+
+  .tarot-card-front h3,
+  .tarot-card-back h3 {
+    font-size: 18px;
+  }
+
+  .tarot-card-back p {
+    font-size: 14px;
+  }
+}
 </style>
