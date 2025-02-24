@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import SteppersVertical from '@/components/SteppersVertical.vue' // import the step component
 
 // Cards array
 const cards = ref([])
@@ -17,20 +18,12 @@ const drawCards = async () => {
     image: `/cards/${card.name_short}.png`,
   }))
 }
-
-// Flip the card for cards meaning
-const flipCard = (index) => {
-  cards.value[index].flipped = !cards.value[index].flipped
-}
 </script>
 
 <template>
   <div class="fortune-container">
     <div class="fortune-welcoming">
       <h1>Fortune Tarot</h1>
-    </div>
-
-    <div>
       <p>
         Welcome to the world of Fortune Tarot, where the cards hold the keys to your past, present,
         and future. On this page, you can draw three tarot cards and receive insights that may guide
@@ -41,6 +34,7 @@ const flipCard = (index) => {
 
     <div class="step">
       <h2>How to play...</h2>
+      <SteppersVertical />
     </div>
 
     <div class="fortune-app">
@@ -78,3 +72,31 @@ const flipCard = (index) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Base setup for this page */
+.tarot-app {
+  text-align: center;
+  font-family: 'IM Fell DW Pica', sans-serif;
+  color: #03315c; /* Dark blue text color */
+}
+
+/* Welcomeming text setting */
+.fortune-welcoming {
+  color: #000000;
+  padding: 20vh 2rem;
+  font-size: 36px;
+  margin: 15vh auto;
+  max-width: 1200px;
+  text-align: left;
+}
+
+.fortune-welcoming p {
+  color: #000000;
+  font-size: 36px;
+}
+
+.step {
+  max-width: 1200px;
+}
+</style>

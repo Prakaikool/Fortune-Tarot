@@ -66,11 +66,11 @@ onMounted(fetchTarotCards)
 <template>
   <div class="tarot-welcoming">
     <h1>✪ Discover the Cards...</h1>
-    <h2>
-      Welcome to the Tarot Card Library, where you can explore the full deck of tarot cards and
-      uncover their meanings. Each card carries deep symbolism, offering insights into life’s
-      mysteries, challenges, and guidance.
-    </h2>
+    <p>
+      Tarot Card Library, where you can explore the full deck of tarot cards and uncover their
+      meanings. Each card carries deep symbolism, offering insights into life’s mysteries,
+      challenges, and guidance.
+    </p>
   </div>
   <div class="tarot-app">
     <h1>All Cards ({{ filteredCards.length }})</h1>
