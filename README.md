@@ -45,6 +45,7 @@ I created this project to help people easily explore tarot cards online, get qui
 ![image](https://github.com/user-attachments/assets/0d611c18-a06b-4625-923c-f7d4395a7b6a)
 
 [▶ Watch the demo video](assets/FortuneTarotDemo.mp4)
+
 ---
 
 ## Roadmap / Future Plans
